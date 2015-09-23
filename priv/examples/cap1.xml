@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cap:alert xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:emergency:cap:1.2 CAP-v1.2-os.xsd ">
+	<cap:identifier>Libelium_2015-09-18T18:56:05+:00:004757</cap:identifier>
+	<cap:sender>Libelium_t1_394778325</cap:sender>
+	<cap:sent>2015-09-18T18:56:05+:00:00</cap:sent>
+	<cap:status>Actual</cap:status>
+	<cap:msgType>Alert</cap:msgType>
+	<cap:scope>Public</cap:scope>
+	<cap:code>KPI</cap:code>
+	<cap:info>
+		<cap:category>Other</cap:category>
+		<cap:event>Libelium</cap:event>
+		<cap:urgency>Inmediate</cap:urgency>
+		<cap:severity>Unknown</cap:severity>
+		<cap:certainty>Observed</cap:certainty>
+		<cap:onset>2015-09-18T18:56:05+:00:00</cap:onset>
+		<cap:senderName>Libelium</cap:senderName>
+		<cap:headline>Waspmote sensors</cap:headline>
+		<cap:description>Sensor data from Waspmote devices: DUST</cap:description>
+		<cap:parameter>
+			<cap:valueName>DUST</cap:valueName>
+			<cap:value>0.015</cap:value>
+		</cap:parameter>
+	</cap:info>
+</cap:alert>
+
