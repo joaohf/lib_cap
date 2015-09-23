@@ -1,6 +1,6 @@
 [{<<"ejson">>,
-  {git,"https://github.com/jonasrichard/ejson",
-       {ref,"7a55f7029686ec513f8de352a5219282307cad39"}},
+  {git,"https://github.com/joaohf/ejson",
+       {ref,"3d7e78d315d6addd716d39738741277801992690"}},
   0},
  {<<"eper">>,
   {git,"git://github.com/massemanet/eper.git",
