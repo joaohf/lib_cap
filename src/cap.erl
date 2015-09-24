@@ -127,7 +127,7 @@ create(Model, CapProps) ->
 convert_to_json(Model, CapXml) ->
     {ok, Result, _} = erlsom:scan(CapXml, Model),
 
-    io:format("Result: ~p~n", [Result]),
+    %io:format("Result: ~p~n", [Result]),
 
     {ok, Json} = to_json(Result),
     Json.
