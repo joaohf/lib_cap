@@ -158,7 +158,7 @@ identifier(Else) ->
 sent(undefined) ->
     sent(calendar:local_time());
 sent({{Year,Month,Day},{Hour,Minute,Sec}}) ->
-    F = io_lib:format("~4w/~w/~wT~w:~w:~w", [Year,Month,Day,Hour,Minute,Sec]),
+    F = io_lib:format("~4..0B-~2..0B-~2..0BT~2..0B:~2..0B:~2..0B", [Year,Month,Day,Hour,Minute,Sec]),
     lists:flatten(F);
 sent(_) ->
     sent(undefined).
