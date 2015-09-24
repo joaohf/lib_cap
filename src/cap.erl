@@ -156,9 +156,11 @@ identifier(Else) ->
     Else.
         
 sent(undefined) ->
-    sent(calendar:local_time());
-sent({{Year,Month,Day},{Hour,Minute,Sec}}) ->
-    F = io_lib:format("~4..0B-~2..0B-~2..0BT~2..0B:~2..0B:~2..0B", [Year,Month,Day,Hour,Minute,Sec]),
+    % TODO: get timezone. For instance, just set a default
+    sent({calendar:local_time(), {'+', 03, 00}});
+sent({{{Year,Month,Day}, {Hour,Minute,Sec}}, {X, Zh, Zm}}) ->
+    F = io_lib:format("~4..0B-~2..0B-~2..0BT~2..0B:~2..0B:~2..0B~s~2..0B:~2..0B",
+                      [Year,Month,Day,Hour,Minute,Sec,X,Zh,Zm]),
     lists:flatten(F);
 sent(_) ->
     sent(undefined).
