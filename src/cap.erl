@@ -9,7 +9,8 @@
 -export([
          model/0,
          create/2,
-         convert_to_json/2
+         convert_to_json/2,
+         convert_to_term/2
         ]).
 
 -include("CAP-v1.2.hrl").
@@ -124,6 +125,7 @@ create(Model, CapProps) ->
 
     encode(Model, Response).
 
+%% @doc Convert a CAP Xml to Json
 convert_to_json(Model, CapXml) ->
     {ok, Result, _} = erlsom:scan(CapXml, Model),
 
@@ -131,6 +133,11 @@ convert_to_json(Model, CapXml) ->
 
     {ok, Json} = to_json(Result),
     Json.
+
+%% @doc Convert a CAP Xml to Erlang term()
+convert_to_term(Model, CapXml) ->
+    Json = convert_to_json(Model, CapXml),
+    jsx:decode(Json).
     
 
 %%====================================================================
