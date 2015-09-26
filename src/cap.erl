@@ -110,7 +110,7 @@ create(Model, CapProps) ->
     Status = proplists:get_value(status, CapProps, "Actual"),
     MsgType = proplists:get_value(msgType, CapProps, "Alert"),
     Scope = proplists:get_value(scope, CapProps, "Public"),
-    Code = proplists:get_value(code, CapProps, " "),
+    _Code = proplists:get_value(code, CapProps, " "),
 
     ResponseInfo = info(proplists:get_value(info, CapProps)),
     Response = #alert{
